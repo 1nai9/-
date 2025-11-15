@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0f26; /* أزرق ليلي داكن */
+  color: #e8f0ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== شريط التنقل السفلي ===== */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141b3c; /* أزرق ليلي متوسط */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 2px solid #c9a34a; /* ذهبي غامق */
+}
+
+.navbar a {
+  color: #89b7ff; /* أزرق سماوي */
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #f5d38b; /* ذهبي لامع */
+}
+
+/* ===== صفحة الروابط ===== */
+.links-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.link-button {
+  background-color: #141b3c; /* أزرق ليلي متوسط */
+  color: #e8f0ff;
+  border: 2px solid #c9a34a;
+  border-radius: 12px;
+  padding: 14px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 70%;
+  max-width: 10000px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.link-button:hover {
+  background-color: #c9a34a; /* ذهبي غامق */
+  color: #0b0f26; /* داكن ليتباين مع الذهبي */
+  border-color: #f5d38b;
+}
+
+/* ===== صفحة البروفايل ===== */
+.profile-header {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.profile-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 1000%;
+  width: 100%;
+  height: 180px;
+  background-color: #141b3c; 
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #f5d38b;
+}
+
+.profile-top {
+  position: absolute;
+  bottom: -40px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* الصورة الشخصية */
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #0b0f26;
+  border: 6px solid #f5d38b;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+/* النص */
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  color: #e8f0ff;
+  position: relative;
+  top: 25px;
+  right: -10px;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: #e8f0ff;
+}
+
+/* العلم */
+.flag-box {
+  width: 28px;
+  height: 18px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: 8px;
+  border: 3px solid #fff;
+}
+
+.flag-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-top: -50px;
+  padding: 50px;
+  color: #e8f0ff;
+  text-align: center;
+}
+
+.about-me-box {
+  background-color: #141b3c;
+  color: #e8f0ff;
+  border-radius: 15px;
+  padding: 17px;
+  font-size: 15px;
+  text-align: right;
+  max-width: 1300px;
+  width: 90%;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: 0.3s;
+  margin-top: 25px;
+  border-left: 5px solid #c9a34a;
+}
+
+.about-me-box h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #f5d38b;
+}
+
+/* للشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-me-box {
+    max-width: 1300px;
+    margin-top: 50px;
+  }
+
+  .link-button {
+    max-width: 100000px;
+    margin-top: 75px;
+  }
+
+  .profile-header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+
+  .profile-banner {
+    height: 470px;
+    background-color: #141b3c;
+    border-bottom: 3px solid #c9a34a;
+  }
+}
+
+/* العلم الصغير */
+.flag-tiny {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  margin-right: 1px;
+  min-width: 20px;
+  height: 14px;
+  padding: 0 3px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #e8f0ff;
+  background-color: #0b0f26;
+  border: 2px solid #c9a34a;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 13px;
+  text-transform: uppercase;
+}
